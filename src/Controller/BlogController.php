@@ -19,7 +19,10 @@ class BlogController extends AbstractController
     }
     public function list(int $page): Response
     {
-      // code...
+      return $this->render('blog/show.html.twig', [
+        'article' => 'article',
+        'page' => $page,
+      ]);
     }
     public function show(string $slug): Response
     {
